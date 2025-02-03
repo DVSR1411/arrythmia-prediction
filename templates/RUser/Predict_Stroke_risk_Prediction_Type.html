@@ -1,0 +1,24 @@
+{% extends 'RUser/base.html' %}
+{% block userblock %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Predict Stroke Risk</h2>
+            <div class="card">
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <!-- Add your form fields here -->
+                        <button type="submit" class="btn btn-primary">Predict</button>
+                    </form>
+                    {% if objs %}
+                    <div class="mt-4">
+                        <h4>Prediction Result: {{ objs }}</h4>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
