@@ -30,10 +30,3 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
-
-## Docker
-Build and run with Docker:
-```bash
-docker build -t stroke-risk-prediction .
-docker run -p 8000:8000 stroke-risk-prediction
-```
